@@ -29,20 +29,20 @@ public class CoursesService {
 		
 		List<Course> courses = courseDao.getCourses();
 		
-		int[] cl = {0,0,0,0,0,0,0};
+		int[] sum = {0,0,0,0,0,0,0};
 		for (int i = 0; i < courses.size(); i++) {
 			String category = courses.get(i).getCategory();
 			int credit = courses.get(i).getCredit();
 			
-			if (category.contains("교필")) cl[0] += credit;
-			else if (category.contains("토대")) cl[1] += credit;
-			else if (category.contains("인재")) cl[2] += credit;
-			else if (category.contains("자율")) cl[3] += credit;
-			else if (category.contains("전기")) cl[4] += credit;
-			else if (category.contains("전선")) cl[5] += credit;
-			else cl[6] += credit;
+			if (category.contains("교필")) sum[0] += credit;
+			else if (category.contains("토대")) sum[1] += credit;
+			else if (category.contains("인재")) sum[2] += credit;
+			else if (category.contains("자율")) sum[3] += credit;
+			else if (category.contains("전기")) sum[4] += credit;
+			else if (category.contains("전선")) sum[5] += credit;
+			else sum[6] += credit;
 		}
-		return cl;
+		return sum;
 	}
 
 	public boolean insertCourse(Course course) {
