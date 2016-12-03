@@ -1,0 +1,33 @@
+@CHARSET "UTF-8";
+
+.main {
+	
+	width:300px;
+	border:3px solid black;
+	margin:100px;
+	padding:20px;
+	text-size:large;
+}
+
+.main2 {
+	
+	width:500px;
+	border:3px solid black;
+	margin:100px;
+	padding:20px;
+	text-size:medium;
+	text-align:center;
+}
+
+.head2 {
+	font-weight: bold;
+}
+
+.head {
+	text-align: center;
+}
+
+.form {
+	width:100px;
+	text-align:right;
+}
